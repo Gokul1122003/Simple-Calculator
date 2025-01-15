@@ -1,85 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<style>
-    body{
-        background-image: url("C:\Users\Asus\Documents\Simple Calculator\Simple-Calculator\bgcalculatoe.jpg");
-        background-size: cover;
+  </head>
+  <style>
+    body {
+      background-image: url("bgcalculatoe.jpg");
+      background-size: cover;
     }
-    .clabox{
-       border: 2px solid black;
-       position: relative;
-       display: inline-block;
-       top: 150px;
-       left: 35%;
-       padding: 50px;
-       box-shadow: 2px 2px 8px 2px white;
+    .clabox {
+      border: 2px solid black;
+      position: relative;
+      display: inline-block;
+      top: 150px;
+      left: 35%;
+      padding: 50px;
+      box-shadow: 2px 2px 8px 2px white;
     }
-   .button{
-    display: flex;
-    justify-content: space-between;
-   }
-</style>
-<body>
+    .button {
+      display: flex;
+      justify-content: space-between;
+    }
+  </style>
+  <body>
     <div class="clabox">
-    <h1>Simple Calculator</h1>
-    <label for="num1">Enter num1:</label>
-     <input type="number" id="num1"><br><br>
-     <label for="num2">Enter num2:</label>
-     <input type="number" id="num2"><br><br>
+      <h1>Simple Calculator</h1>
+      <label for="num1">Enter num1:</label>
+      <input type="number" id="num1" /><br /><br />
+      <label for="num2">Enter num2:</label>
+      <input type="number" id="num2" /><br /><br />
 
-     <div class="button">
-    <input type="button" onclick="addfun()" value="ADD"><span><input type="button" onclick="subfun()" value="SUB"></span>
-    <span><input type="button" onclick="mulfun()" value="MUL"></span><span><input type="button" onclick="divfun()" value="DIV"></span>
-     </div>
+      <div class="button">
+        <input type="button" onclick="addfun()" value="ADD" /><span
+          ><input type="button" onclick="subfun()" value="SUB"
+        /></span>
+        <span><input type="button" onclick="mulfun()" value="MUL" /></span
+        ><span><input type="button" onclick="divfun()" value="DIV" /></span>
+      </div>
 
-     <h1 >Result:<span id="result">0</span></h1> 
-
-    </div> 
+      <h1>Result:<span id="result">0</span></h1>
+    </div>
     <script>
-        function addfun(){
-            let num1=parseFloat(document.getElementById("num1").value);
-            let num2=parseFloat(document.getElementById("num2").value);
-            if(isNaN(num1) ||  isNaN(num2)){
-                alert("Enter valid number")
-            }
-            const result=num1+num2;
-            document.getElementById("result").innerHTML=result;
+      function addfun() {
+        let num1 = parseFloat(document.getElementById("num1").value);
+        let num2 = parseFloat(document.getElementById("num2").value);
+        if (isNaN(num1) || isNaN(num2)) {
+          alert("Enter valid number");
         }
-        function subfun(){
-            let num1=parseFloat(document.getElementById("num1").value);
-            let num2=parseFloat(document.getElementById("num2").value);
-            if(isNaN(num1) ||  isNaN(num2)){
-                alert("Enter valid number")
-            }
-            const result=num1-num2;
-            document.getElementById("result").innerHTML=result;
+        const result = num1 + num2;
+        document.getElementById("result").innerHTML = result;
+      }
+      function subfun() {
+        let num1 = parseFloat(document.getElementById("num1").value);
+        let num2 = parseFloat(document.getElementById("num2").value);
+        if (isNaN(num1) || isNaN(num2)) {
+          alert("Enter valid number");
         }
-        function mulfun(){
-            let num1=parseFloat(document.getElementById("num1").value);
-            let num2=parseFloat(document.getElementById("num2").value);
-            if(isNaN(num1) ||  isNaN(num2)){
-                alert("Enter valid number")
-            }
-            const result=num1*num2;
-            document.getElementById("result").innerHTML=result;
+        const result = num1 - num2;
+        document.getElementById("result").innerHTML = result;
+      }
+      function mulfun() {
+        let num1 = parseFloat(document.getElementById("num1").value);
+        let num2 = parseFloat(document.getElementById("num2").value);
+        if (isNaN(num1) || isNaN(num2)) {
+          alert("Enter valid number");
         }
-        function divfun(){
-            let num1=parseFloat(document.getElementById("num1").value);
-            let num2=parseFloat(document.getElementById("num2").value);
-            if(isNaN(num1) ||  isNaN(num2)){
-                alert("Enter valid number")
-            }
-            const result=num1/num2;
-            document.getElementById("result").innerHTML=result;
+        const result = num1 * num2;
+        document.getElementById("result").innerHTML = result;
+      }
+      function divfun() {
+        let num1 = parseFloat(document.getElementById("num1").value);
+        let num2 = parseFloat(document.getElementById("num2").value);
+        if (isNaN(num1) || isNaN(num2)) {
+          alert("Enter valid number");
         }
-        
-        
+        const result = num1 / num2;
+        document.getElementById("result").innerHTML = result;
+      }
     </script>
-</body>
+  </body>
 </html>
-
